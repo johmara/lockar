@@ -54,4 +54,8 @@ dependencies {
     //implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':opencv')
 
+    implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+
 }

@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -39,6 +40,15 @@ class MainActivity : AppCompatActivity() {
                 REQUEST_CAMERA)
         }
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController, drawerLayout)
+    }
+
+    fun onStartupClicked(view: View){
+        view.findNavController().navigate(StartupFragmentDirections.actionStartupFragmentToCameraView())
     }
 
     companion object {

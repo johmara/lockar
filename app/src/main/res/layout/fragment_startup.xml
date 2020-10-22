@@ -9,7 +9,9 @@
         android:id="@+id/startupConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:onClick="onStartupClicked"
+        >
 
         <TextView
             android:id="@+id/text_lockar"
@@ -20,6 +22,7 @@
             android:fontFamily="@font/kulimpark"
             android:text="@string/app_name"
             android:textAppearance="@style/title"
+            android:onClick="onStartupClicked"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +37,7 @@
             android:fontFamily="@font/kulimpark_italic"
             android:text="@string/always_acce"
             android:textAppearance="@style/subtitle"
+            android:onClick="onStartupClicked"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -47,9 +51,10 @@
             android:layout_height="229.84dp"
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_lockar"
+            android:onClick="onStartupClicked"
             app:layout_constraintBottom_toTopOf="@id/text_lockar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"

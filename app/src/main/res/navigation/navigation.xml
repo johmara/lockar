@@ -10,6 +10,14 @@
         android:name="com.example.lockar.StartupFragment"
         android:label="fragment_startup"
         tools:layout="@layout/fragment_startup" >
+        <action
+            android:id="@+id/action_startupFragment_to_cameraView"
+            app:destination="@id/cameraView" />
     </fragment>
+    <fragment
+        android:id="@+id/cameraView"
+        android:name="com.example.lockar.CameraView"
+        android:label="fragment_camera_view"
+        tools:layout="@layout/fragment_camera_view" />
 
 </navigation>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LockAR</string>
+    <string name="always_acce">ALWAYS ACCESS</string>
 </resources>

@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="ThemeOverlay.LockAR.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/black_overlay</item>
+        <item name="fullscreenTextColor">@color/mint_cream</item>
+    </style>
+</resources>

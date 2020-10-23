@@ -1,22 +1,13 @@
 package com.example.lockar
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.lockar.databinding.ActivityMainBinding
-import io.reactivex.ObservableTransformer
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
-import org.opencv.android.OpenCVLoader
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,11 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = binding.drawerLayout
 
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA),
-                REQUEST_CAMERA)
-        }
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -51,21 +37,4 @@ class MainActivity : AppCompatActivity() {
         view.findNavController().navigate(StartupFragmentDirections.actionStartupFragmentToDoorDetection())
     }
 
-    companion object {
-        private val TAG = MainActivity::class.java.simpleName
-        private const val REQUEST_CAMERA = 1
-        private const val SIZE = 400
-
-        init {
-            if (!OpenCVLoader.initDebug()) {
-                Log.v(TAG, "init OpenCV")
-            }
-        }
-
-        private fun <T> mainAsync(): ObservableTransformer<T, T> {
-            return ObservableTransformer { obs ->
-                obs.subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread())
-            }
-        }
-    }
 }

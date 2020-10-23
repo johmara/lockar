@@ -7,6 +7,7 @@
     android:visibility="visible"
     tools:context=".DoorDetection">
 
+
     <org.opencv.android.JavaCameraView
         android:id="@+id/camera_viewer"
         android:layout_width="match_parent"
@@ -16,8 +17,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.example.lockar.views.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <ImageView
-        android:id="@+id/locked_lock"
+        android:id="@+id/img_lock"
         android:layout_width="169dp"
         android:layout_height="122dp"
         android:visibility="gone"
@@ -25,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/camera_viewer"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:contentDescription="@string/door_lock" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

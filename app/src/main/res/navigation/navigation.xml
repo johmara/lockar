@@ -11,13 +11,15 @@
         android:label="fragment_startup"
         tools:layout="@layout/fragment_startup" >
         <action
-            android:id="@+id/action_startupFragment_to_cameraView"
-            app:destination="@id/cameraView" />
+            android:id="@+id/action_startupFragment_to_doorDetection"
+            app:destination="@id/doorDetection" />
     </fragment>
-    <fragment
-        android:id="@+id/cameraView"
-        android:name="com.example.lockar.CameraView"
-        android:label="fragment_camera_view"
-        tools:layout="@layout/fragment_camera_view" />
+
+    <activity
+        android:id="@+id/doorDetection"
+        android:name="com.example.lockar.DoorDetection"
+        android:label="activity_doordetection"
+        tools:layout="@layout/activity_door_detection"
+        />
 
 </navigation>

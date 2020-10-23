@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onStartupClicked(view: View){
-        view.findNavController().navigate(StartupFragmentDirections.actionStartupFragmentToCameraView())
+        view.findNavController().navigate(StartupFragmentDirections.actionStartupFragmentToDoorDetection())
     }
 
     companion object {

@@ -1,5 +1,5 @@
 # lockar
-#### Project website on [johmara.dev/#/lockar](https://johmara.dev)
+#### Project website on [johmara.dev/#/lockar](https://johmara.dev/#/lockar)
 
 ## Running the code on a device/emulator
 To run the software you need to download and install OpenCV to the project:
